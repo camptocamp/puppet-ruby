@@ -8,12 +8,12 @@ class ruby::gems {
   package { "ruby-dev":
     ensure => present,
     name   => $operatingsystem ? {
-      RedHat => "ruby-devel",
-      Debian => "ruby-dev",
+      /RedHat|CentOS|Fedora/   => "ruby-devel",
+      /Debian|Ubuntu|kFreeBSD/ => "ruby-dev",
     },
   }
 
-  if $operatingsystem == "debian" {
+  if $operatingsystem =~ /Debian|Ubuntu|kFreeBSD/ {
     package { "rake":
       ensure => present
     }
