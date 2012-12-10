@@ -9,17 +9,18 @@ in the form of virtual resources. Wherever a library is needed you just have to
 write the following lines:
 
     include ruby::package::json
-    Package <| alias == 'json' |>
+    Package <| alias == 'ruby-json' |>
 
 If you prefer gem packages:
 
+    include ruby::gems
     include ruby::gem::json
-    Package <| alias == 'json' |>
+    Package <| alias == 'ruby-json' |>
 
 Due to a bug (http://projects.puppetlabs.com/issues/4459) resource alias 
 is only usable for require. For example:
 
-    realize Package[json]
+    realize Package[ruby-json]
 
 doesn't work! This is why we use the "spaceship" (collection) operator.
 
