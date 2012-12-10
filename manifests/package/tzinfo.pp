@@ -6,13 +6,13 @@
 # === Example
 #
 #  include ruby::package::tzinfo
-#  Package <| alias == 'tzinfo' |>
+#  Package <| alias == 'ruby-tzinfo' |>
 #
 class ruby::package::tzinfo {
 
   validate_re(
-    $::osfamily, 
-    ['^RedHat$','^Debian$'], 
+    $::osfamily,
+    ['^RedHat$','^Debian$'],
     "Unsupported os family ${::osfamily}"
   )
 
@@ -22,7 +22,7 @@ class ruby::package::tzinfo {
   }
 
   @package {$package_name:
-    alias  => 'tzinfo',
+    alias  => 'ruby-tzinfo',
   }
 
 }

@@ -1,17 +1,17 @@
 # == Class: ruby::package::sinatra
 #
-# Declare Sinatra web application library as virtual resource 
+# Declare Sinatra web application library as virtual resource
 #
 # === Example
 #
 #  include ruby::package::sinatra
-#  Package <| alias == 'sinatra' |>
+#  Package <| alias == 'ruby-sinatra' |>
 #
 class ruby::package::sinatra {
 
   validate_re(
-    $::osfamily, 
-    ['^RedHat$','^Debian$'], 
+    $::osfamily,
+    ['^RedHat$','^Debian$'],
     "Unsupported os family ${::osfamily}"
   )
 
@@ -21,7 +21,7 @@ class ruby::package::sinatra {
   }
 
   @package {$package_name:
-    alias  => 'sinatra',
+    alias  => 'ruby-sinatra',
   }
 
 }

@@ -1,6 +1,6 @@
 # == Class: ruby::package::thin
 #
-# Declare Thin (a Ruby web-server based on Mongrel 
+# Declare Thin (a Ruby web-server based on Mongrel)
 # as virtual resource
 #
 # === Example
@@ -11,8 +11,8 @@
 class ruby::package::thin {
 
   validate_re(
-    $::osfamily, 
-    ['^RedHat$','^Debian$'], 
+    $::osfamily,
+    ['^RedHat$','^Debian$'],
     "Unsupported os family ${::osfamily}"
   )
 
@@ -22,7 +22,7 @@ class ruby::package::thin {
   }
 
   @package {$package_name:
-    alias  => 'thin',
+    alias  => 'ruby-thin',
   }
 
 }

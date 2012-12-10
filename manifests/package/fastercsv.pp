@@ -6,7 +6,7 @@
 # === Example
 #
 #  include ruby::package::fastercsv
-#  Package <| alias == 'fastercsv' |>
+#  Package <| alias == 'ruby-fastercsv' |>
 #
 class ruby::package::fastercsv {
 
@@ -22,7 +22,7 @@ class ruby::package::fastercsv {
   }
 
   @package {$package_name:
-    alias  => 'fastercsv',
+    alias  => 'ruby-fastercsv',
   }
 
 }

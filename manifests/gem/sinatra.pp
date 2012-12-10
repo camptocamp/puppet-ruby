@@ -6,13 +6,13 @@
 #
 #  include ruby::gems
 #  include ruby::gem::sinatra
-#  Package <| alias == 'sinatra' |>
+#  Package <| alias == 'ruby-sinatra' |>
 #
 class ruby::gem::sinatra {
 
   @package {'sinatra':
     provider => 'gem',
-    alias    => 'sinatra',
+    alias    => 'ruby-sinatra',
   }
 
 }

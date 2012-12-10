@@ -7,13 +7,13 @@
 #
 #  include ruby::gems
 #  include ruby::gem::tzinfo
-#  Package <| alias == 'tzinfo' |>
+#  Package <| alias == 'ruby-tzinfo' |>
 #
 class ruby::gem::tzinfo {
 
   @package {'tzinfo':
     provider => 'gem',
-    alias    => 'tzinfo',
+    alias    => 'ruby-tzinfo',
   }
 
 }

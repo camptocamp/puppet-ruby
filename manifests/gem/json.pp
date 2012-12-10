@@ -6,13 +6,13 @@
 #
 #  include ruby::gems
 #  include ruby::gem::json
-#  Package <| alias == 'json' |>
+#  Package <| alias == 'ruby-json' |>
 #
 class ruby::gem::json {
 
   @package {'json':
     provider => 'gem',
-    alias    => 'json',
+    alias    => 'ruby-json',
   }
 
 }

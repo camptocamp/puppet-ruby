@@ -5,13 +5,13 @@
 # === Example
 #
 #  include ruby::package::json
-#  Package <| alias == 'json' |>
+#  Package <| alias == 'ruby-json' |>
 #
 class ruby::package::json {
 
   validate_re(
-    $::osfamily, 
-    ['^RedHat$','^Debian$'], 
+    $::osfamily,
+    ['^RedHat$','^Debian$'],
     "Unsupported os family ${::osfamily}"
   )
 
@@ -21,7 +21,7 @@ class ruby::package::json {
   }
 
   @package {$package_name:
-    alias  => 'json',
+    alias  => 'ruby-json',
   }
 
 }

@@ -6,13 +6,13 @@
 #  
 #  include ruby::gems
 #  include ruby::gem::fastercsv
-#  Package <| alias == 'fastercsv' |>
+#  Package <| alias == 'ruby-fastercsv' |>
 #
 class ruby::gem::fastercsv {
 
   @package {'fastercsv':
     provider => 'gem',
-    alias    => 'fastercsv',
+    alias    => 'ruby-fastercsv',
   }
 
 }
