@@ -1,6 +1,6 @@
 # == Class: ruby::gem::thin
 #
-# Declare Thin (a Ruby web-server based on Mongrel 
+# Declare Thin (a Ruby web-server based on Mongrel
 # as virtual resource
 #
 # === Example

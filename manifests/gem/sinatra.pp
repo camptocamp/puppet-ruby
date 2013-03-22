@@ -1,6 +1,6 @@
 # == Class: ruby::gem::sinatra
 #
-# Declare Sinatra web application library as virtual resource 
+# Declare Sinatra web application library as virtual resource
 #
 # === Example
 #

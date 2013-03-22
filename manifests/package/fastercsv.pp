@@ -1,6 +1,6 @@
 # == Class: ruby::package::fastercsv
 #
-# Declare Ruby‘s standard CSV library package as 
+# Declare Ruby‘s standard CSV library package as
 # virtual resource.
 #
 # === Example
@@ -11,8 +11,8 @@
 class ruby::package::fastercsv {
 
   validate_re(
-    $::osfamily, 
-    ['^RedHat$','^Debian$'], 
+    $::osfamily,
+    ['^RedHat$','^Debian$'],
     "Unsupported os family ${::osfamily}"
   )
 

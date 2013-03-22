@@ -1,6 +1,6 @@
 # == Class: ruby::package::tzinfo
 #
-# Declare TZinfo (a Ruby library that uses the standard 
+# Declare TZinfo (a Ruby library that uses the standard
 # Time Zone Database) as virtual resource
 #
 # === Example
