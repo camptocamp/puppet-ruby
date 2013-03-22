@@ -1,20 +1,20 @@
 # this class just installs the minimal stuff needed to run "gem install"
 class ruby::gems {
 
-  package { "rubygems":
+  package { 'rubygems':
     ensure => present
   }
 
-  package { "ruby-dev":
+  package { 'ruby-dev':
     ensure => present,
-    name   => $operatingsystem ? {
-      /RedHat|CentOS|Fedora/   => "ruby-devel",
-      /Debian|Ubuntu|kFreeBSD/ => "ruby-dev",
+    name   => $::osfamily ? {
+      'RedHat' => 'ruby-devel',
+      'Debian' => 'ruby-dev',
     },
   }
 
-  if $operatingsystem =~ /Debian|Ubuntu|kFreeBSD/ {
-    package { "rake":
+  if $::osfamily =~ 'Debian' {
+    package { 'rake':
       ensure => present
     }
   }
