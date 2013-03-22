@@ -1,6 +1,7 @@
 name         'camptocamp-ruby'
 version      '0.0.1'
 dependency   'puppetlabs/stdlib', '3.2.0'
+dependency   'camptocamp/buildenv', '0.0.1'
 source       'https://github.com/camptocamp/puppet-ruby'
 author       'DevOps Team / Camptocamp'
 license      'GNU GPLv3'
