@@ -13,7 +13,7 @@ class ruby::gems {
     },
   }
 
-  if $::osfamily =~ 'Debian' {
+  if $::osfamily == 'Debian' {
     package { 'rake':
       ensure => present
     }
