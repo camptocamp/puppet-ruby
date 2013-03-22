@@ -2,17 +2,17 @@
 class ruby::passenger {
 
   if ( ! $passenger_version ) {
-    $passenger_version = "2.2.2"
+    $passenger_version = '2.2.2'
   }
-  $passenger_root = $operatingsystem ? {
+  $passenger_root = $::osfamily ? {
     RedHat => "/usr/lib/ruby/gems/1.8/gems/passenger-${passenger_version}",
     debian => "/var/lib/gems/1.8/gems/passenger-${passenger_version}",
   }
 
-  package { "passenger":
+  package { 'passenger':
     ensure   => $passenger_version,
-    provider => "gem",
-    require  => Package["ruby-dev"],
+    provider => 'gem',
+    require  => Package['ruby-dev'],
   }
 
 }
