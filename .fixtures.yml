@@ -1,6 +1,6 @@
 fixtures:
   repositories:
     "stdlib": "git://github.com/puppetlabs/puppetlabs-stdlib.git"
-    "buildenv": "git://github.com/camptocamp/puppetlabs-buildenv.git"
+    "buildenv": "git://github.com/camptocamp/puppet-buildenv.git"
   symlinks:
     "ruby": "#{source_dir}"
