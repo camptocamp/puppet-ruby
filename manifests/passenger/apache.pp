@@ -1,5 +1,9 @@
-class ruby::passenger::apache inherits ruby::passenger {
+class ruby::passenger::apache {
+  include ::ruby::passenger
   include ::buildenv::cpp
+  include ::buildenv::apache
+
+  $passenger_root = $ruby::passenger::passenger_root
 
   package { 'apache-dev':
     ensure => present,
@@ -14,9 +18,9 @@ class ruby::passenger::apache inherits ruby::passenger {
     creates     => "${passenger_root}/ext/apache2/mod_passenger.so",
     subscribe   => Package['passenger'],
     require     => [
-      Package['passenger'],
-      Package['apache-dev'],
-      Class['buildenv::cpp']
+      Class['ruby::passenger'],
+      Class['buildenv::cpp'],
+      Class['buildenv::apache'],
       ],
   }
 
