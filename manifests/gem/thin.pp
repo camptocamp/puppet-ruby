@@ -7,7 +7,7 @@
 #
 #  include ruby::gems
 #  include ruby::gem::thin
-#  Package <| alias == 'ruby-thin' |>
+#  Package <| title == 'thin' |>
 #
 class ruby::gem::thin {
 
@@ -15,7 +15,6 @@ class ruby::gem::thin {
 
   @package {'thin':
     provider => 'gem',
-    alias    => 'ruby-thin',
     require  => Package['g++'],
   }
 

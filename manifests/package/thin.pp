@@ -6,7 +6,7 @@
 # === Example
 #
 #  include ruby::package::thin
-#  Package <| alias == 'thin' |>
+#  Package <| title == 'thin' |>
 #
 class ruby::package::thin {
 
@@ -21,8 +21,8 @@ class ruby::package::thin {
     'Debian' => 'thin',
   }
 
-  @package {$package_name:
-    alias  => 'ruby-thin',
+  @package {'thin':
+    name  => $package_name,
   }
 
 }
