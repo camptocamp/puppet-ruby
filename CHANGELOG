@@ -1,0 +1,7 @@
+2014-07-02 - Version 0.1.0
+
+- rubygems included in ruby package in Ubuntu Trusty
+- Fix unit tests
+- Auto enable strict_variables for unit tests when puppet > 3.5
+- Use ruby 2.1.2 instead of 2.1.1
+
