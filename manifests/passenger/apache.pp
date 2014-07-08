@@ -36,7 +36,7 @@ class ruby::passenger::apache {
     },
     require => [
       Exec['install passenger'],
-      Package['apache']
+      Package['httpd']
       ],
     content => "# file managed by puppet
 LoadModule passenger_module ${passenger_root}/ext/apache2/mod_passenger.so
