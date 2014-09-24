@@ -1,3 +1,7 @@
+2014-09-24 - Version 0.1.2
+
+- Update meta files
+
 2014-07-29 - Version 0.1.1
 
 - Rename Package['apache'] as Package['httpd']
