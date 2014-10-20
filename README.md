@@ -1,5 +1,8 @@
 # Ruby Puppet Module
 
+[![Puppet Forge](http://img.shields.io/puppetforge/v/camptocamp/ruby.svg)](https://forge.puppetlabs.com/camptocamp/ruby)
+[![Build Status](https://travis-ci.org/camptocamp/puppet-ruby.png?branch=master)](https://travis-ci.org/camptocamp/puppet-ruby)
+
 This module manages Ruby and RubyGems on Debian/Redhat based systems.
 
 ## Basic usage
