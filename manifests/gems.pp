@@ -11,12 +11,14 @@ class ruby::gems {
     ensure => present
   }
 
+  $ruby_dev_pkg = $::osfamily ? {
+    'RedHat' => 'ruby-devel',
+    'Debian' => 'ruby-dev',
+  }
+
   package { 'ruby-dev':
     ensure => present,
-    name   => $::osfamily ? {
-      'RedHat' => 'ruby-devel',
-      'Debian' => 'ruby-dev',
-    },
+    name   => $ruby_dev_pkg,
   }
 
   if $::osfamily == 'Debian' {
