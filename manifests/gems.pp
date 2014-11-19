@@ -1,7 +1,7 @@
 # this class just installs the minimal stuff needed to run "gem install"
 class ruby::gems {
 
-  if $::lsbdistid == 'Ubuntu' and $::lsbdistrelease >= '14.04' {
+  if $::operatingsystem == 'Ubuntu' and $::operatingsystemmajrelease >= '14.04' {
     $rubygems_pkg = 'ruby'
   } else {
     $rubygems_pkg = 'rubygems'
