@@ -1,3 +1,7 @@
+2014-12-16 - Version 1.0.2
+
+- Use operatingsystem* facts instead lsb*
+
 2014-10-20 - Version 1.0.0
 
 - Linting
