@@ -1,6 +1,6 @@
 {
   "name": "camptocamp-ruby",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Camptocamp",
   "summary": "Camptocamp Ruby Module",
   "license": "Apache 2.0",
@@ -9,8 +9,14 @@
   "issues_url": "https://github.com/camptocamp/puppet-ruby/issues",
   "description": "Ruby Module for Puppet",
   "dependencies": [
-    {"name":"puppetlabs/stdlib","version_requirement":"3.2.0"},
-    {"name":"camptocamp/buildenv","version_requirement":"0.0.2"}
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": "3.2.0"
+    },
+    {
+      "name": "camptocamp/buildenv",
+      "version_requirement": "0.0.2"
+    }
   ],
   "operatingsystem_support": [
     {
