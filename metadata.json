@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "author": "Camptocamp",
   "summary": "Camptocamp Ruby Module",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "source": "https://github.com/camptocamp/puppet-ruby",
   "project_page": "https://github.com/camptocamp/puppet-ruby",
   "issues_url": "https://github.com/camptocamp/puppet-ruby/issues",
