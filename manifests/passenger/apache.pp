@@ -6,8 +6,8 @@ class ruby::passenger::apache {
   $passenger_root = $ruby::passenger::passenger_root
 
   $dev_package = $::osfamily ? {
-    RedHat => 'httpd-devel',
-    Debian => 'apache2-threaded-dev',
+    'RedHat' => 'httpd-devel',
+    'Debian' => 'apache2-threaded-dev',
   }
 
   package { 'apache-dev':
@@ -27,8 +27,8 @@ class ruby::passenger::apache {
   }
 
   $passenger_load_path = $::osfamily ? {
-    RedHat => '/etc/httpd/mods-available/passenger.load',
-    Debian => '/etc/apache2/mods-available/passenger.load',
+    'RedHat' => '/etc/httpd/mods-available/passenger.load',
+    'Debian' => '/etc/apache2/mods-available/passenger.load',
   }
 
   file { 'passenger.load':
