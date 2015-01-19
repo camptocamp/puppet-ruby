@@ -11,7 +11,7 @@
 #
 class ruby::gem::thin {
 
-  include buildenv::cpp
+  include ::buildenv::cpp
 
   @package {'thin':
     provider => 'gem',
