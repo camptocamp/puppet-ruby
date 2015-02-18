@@ -8,7 +8,7 @@ class ruby::gems {
   }
 
   package { $rubygems_pkg:
-    ensure => present
+    ensure => present,
   }
 
   $ruby_dev_pkg = $::osfamily ? {
@@ -23,7 +23,7 @@ class ruby::gems {
 
   if $::osfamily == 'Debian' {
     package { 'rake':
-      ensure => present
+      ensure => present,
     }
   }
 }

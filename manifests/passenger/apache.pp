@@ -32,7 +32,7 @@ class ruby::passenger::apache {
   }
 
   file { 'passenger.load':
-    ensure  => present,
+    ensure  => file,
     mode    => '0644',
     owner   => 'root',
     group   => 'root',
