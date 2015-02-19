@@ -1,7 +1,7 @@
 # this class just installs the minimal stuff needed to run "gem install"
 class ruby::gems {
 
-  if $::operatingsystem == 'Ubuntu' and $::operatingsystemmajrelease >= '14.04' {
+  if $::operatingsystem == 'Ubuntu' and versioncmp($::operatingsystemmajrelease, '14.04') >= 0 {
     $rubygems_pkg = 'ruby'
   } else {
     $rubygems_pkg = 'rubygems'
