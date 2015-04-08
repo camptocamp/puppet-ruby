@@ -1,3 +1,8 @@
+## 2015-04-08 - Release 1.1.1
+
+- Do not install rubygems on Debian Jessie
+- Refactor ruby::gems
+
 ## 2015-04-08 - Release 1.1.0
 
 - Use $::lsbmajdistrelease on Ubuntu
