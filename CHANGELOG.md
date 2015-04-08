@@ -1,3 +1,9 @@
+## 2015-04-08 - Release 1.1.0
+
+- Use $::lsbmajdistrelease on Ubuntu
+- Support CentOS and Ubuntu
+- Use rspec-puppet-facts in tests
+
 ## 2015-04-07 - Release 1.0.7
 
 - Fix dependencies in metadata.json
