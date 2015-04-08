@@ -1,9 +1,13 @@
 require 'spec_helper'
 
 describe 'ruby::gems' do
-  let(:facts) { {
-    :operatingsystem => 'Debian',
-    :osfamily        => 'Debian',
-  } }
-  it { should compile.with_all_deps }
+  on_supported_os.each do |os, facts|
+    context "on #{os}" do
+      let(:facts) do
+        facts
+      end
+
+      it { should compile.with_all_deps }
+    end
+  end
 end
