@@ -1,10 +1,30 @@
 # this class just installs the minimal stuff needed to run "gem install"
 class ruby::gems {
 
-  if $::operatingsystem == 'Ubuntu' and versioncmp($::lsbmajdistrelease, '14.04') >= 0 {
-    $rubygems_pkg = 'ruby'
-  } else {
-    $rubygems_pkg = 'rubygems'
+  case $::operatingsystem {
+    'Debian': {
+      if versioncmp($::lsbdistrelease, '8') >= 0 {
+        $rubygems_pkg = 'ruby'
+      } else {
+        $rubygems_pkg = 'rubygems'
+      }
+    }
+
+    'Ubuntu': {
+      if versioncmp($::lsbdistrelease, '14.04') >= 0 {
+        $rubygems_pkg = 'ruby'
+      } else {
+        $rubygems_pkg = 'rubygems'
+      }
+    }
+
+    'RedHat', 'CentOS': {
+      $rubygems_pkg = 'rubygems'
+    }
+
+    default: {
+      fail "Unsupported OS ${::operatingsystem}"
+    }
   }
 
   package { $rubygems_pkg:

@@ -8,6 +8,17 @@ describe 'ruby::gems' do
       end
 
       it { should compile.with_all_deps }
+
+      if facts[:operatingsystem] == 'Debian' && facts[:lsbmajdistrelease] == '8'
+        it { is_expected.not_to contain_package('rubygems') }
+        it { is_expected.to contain_package('ruby') }
+      elsif facts[:operatingsystem] == 'Ubuntu' && facts[:lsbmajdistrelease] == '14'
+        it { is_expected.not_to contain_package('rubygems') }
+        it { is_expected.to contain_package('ruby') }
+      else
+        it { is_expected.to contain_package('rubygems') }
+        it { is_expected.not_to contain_package('ruby') }
+      end
     end
   end
 end
