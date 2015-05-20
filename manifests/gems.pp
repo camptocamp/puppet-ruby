@@ -18,7 +18,7 @@ class ruby::gems {
       }
     }
 
-    'RedHat', 'CentOS': {
+    'RedHat', 'CentOS', 'OracleLinux': {
       $rubygems_pkg = 'rubygems'
     }
 
