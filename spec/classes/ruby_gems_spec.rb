@@ -12,7 +12,7 @@ describe 'ruby::gems' do
       if facts[:operatingsystem] == 'Debian' && facts[:lsbmajdistrelease] == '8'
         it { is_expected.not_to contain_package('rubygems') }
         it { is_expected.to contain_package('ruby') }
-      elsif facts[:operatingsystem] == 'Ubuntu' && facts[:lsbmajdistrelease] == '14'
+      elsif facts[:operatingsystem] == 'Ubuntu' && facts[:lsbdistrelease].to_f >= 14.04
         it { is_expected.not_to contain_package('rubygems') }
         it { is_expected.to contain_package('ruby') }
       else
