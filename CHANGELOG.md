@@ -1,3 +1,7 @@
+## 2015-05-26 - Release 1.1.8
+
+Use random application order in nodeset
+
 ## 2015-05-27 - Release 1.1.7
 
 Fix unit tests
