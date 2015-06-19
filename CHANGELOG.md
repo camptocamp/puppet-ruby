@@ -1,3 +1,7 @@
+## 2015-06-19 - Release 1.1.10
+
+Add OracleLinux support
+
 ## 2015-05-28 - Release 1.1.9
 
 Add beaker_spec_helper to Gemfile
