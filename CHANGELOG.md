@@ -1,3 +1,7 @@
+## 2015-06-26 - Release 1.1.11
+
+Fix strict_variables activation with rspec-puppet 2.2
+
 ## 2015-06-19 - Release 1.1.10
 
 Add OracleLinux support
